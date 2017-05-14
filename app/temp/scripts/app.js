@@ -595,10 +595,11 @@
 	    }, {
 	        key: 'mouseMoveStart',
 	        value: function mouseMoveStart(e) {
-	            e.stopPropagation();
 	            if (e.type === 'mousedown') {
+	                e.preventDefault();
 	                this.start = e.clientX;
 	            } else if (e.type === 'touchstart') {
+	                e.stopPropagation();
 	                this.start = e.touches[0].pageX;
 	            }
 	        }
@@ -607,6 +608,7 @@
 	        value: function mouseMoveEnd(e) {
 	            e.stopPropagation();
 	            if (e.type === 'mouseup') {
+	                e.preventDefault();
 	                this.range = e.clientX - this.start;
 	                if (this.range < -10) {
 	                    this.movePageForward();
@@ -616,6 +618,7 @@
 	                    this.resetSwipe();
 	                }
 	            } else if (e.type === 'touchend') {
+	                e.stopPropagation();
 	                this.range = e.changedTouches[0].pageX - this.start;
 	                if (this.range < -10) {
 	                    this.movePageForward();
