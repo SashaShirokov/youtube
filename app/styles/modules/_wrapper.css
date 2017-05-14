@@ -1,0 +1,6 @@
+.wrapper {
+    max-width: 1236px;
+    /*min-width: 480px;*/
+    padding: 0 18px;
+    margin: 0 auto;
+}

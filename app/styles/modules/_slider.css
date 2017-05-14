@@ -1,0 +1,23 @@
+.slider {
+    position: relative;
+    margin: 10px auto;
+    border: 5px solid $mainBlue;;
+    border-radius: 10px;
+
+    &__carousel {
+        position: relative;
+        overflow: hidden;
+        border: none;
+    }
+
+    &__list {
+        width: 30000em;
+        left: 0px;
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        @mixin clearfix;
+        background-color: $mainBlue;;
+    }
+}

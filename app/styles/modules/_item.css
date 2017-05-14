@@ -1,0 +1,147 @@
+.item {
+    float: left;
+    display: list-item;
+    padding-top: 30px;
+    background-color: $mainBlue;
+
+    @mixin atMedium {
+      padding-top: 70px;
+    }
+
+    &__content {
+      list-style: none;
+      padding: 15px;
+      margin: 20px 20px 0;
+      background-color: $mainSky;
+      border-radius: 10px;
+      cursor: default;
+      background-color: rgba(255, 255, 255, .65);
+      box-shadow: 3.5px 3.5px 2px rgba(23, 51, 72, .85);
+      transition: all .3s ease-out;
+
+      @mixin atMedium {
+        margin: 20px;
+      }
+
+      &:hover {
+         box-shadow: 6.5px 6.5px 4px rgba(23, 51, 72, .85);
+      }
+
+      p {
+        margin-top: 10px;
+        margin-bottom: 13px;
+
+        @mixin atMedium {
+          margin-bottom: 15px;
+        }
+      }
+
+      P:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__imgContainer {
+        text-align: center;
+    }
+
+    &__photo {
+        border-radius: 13px;
+        border: 5px solid #1D4E69;
+        width: 65%;
+        height: 65%;
+        margin: 0 auto -65px;
+        position: relative;
+        top: -65px;
+
+        @mixin atMedium {
+          width: 75%;
+          height: 75%;
+          margin: 0 auto -80px;
+          top: -80px;
+        }
+
+        @mixin atLarge {
+          width: 80%;
+          height: 80%;
+          margin: 0 auto -90px;
+          top: -90px;
+        }
+    }
+
+    &__title {
+       height: 50px;
+       text-align: center;
+       overflow: hidden;
+       font-size: 1.3rem;
+       text-align: center;
+       color: $mainBlue;
+       margin-bottom: 0;
+       margin-top: 0;
+
+       @mixin atMedium {
+         margin-top: 20px;
+         height: 80px;
+       }
+    }
+
+    a {
+       color: $mainBlue;
+       text-decoration: none;
+       font-size: 1.1rem;
+       transition: all .3s ease-out;
+
+       @mixin atMedium {
+         font-size: 1.5rem;
+       }
+
+       &:hover {
+           color: $mainRed;
+       }
+     }
+
+    &__description {
+      height: 100px;
+      padding: 3px;
+      overflow: auto;
+      border-radius: 7px;
+      background: $mainBlue;
+      margin-bottom: 30px;
+      font-size: .8rem;
+      color: #FFF;
+      width: 94%;
+      padding: 5px 10px;
+      line-height: 1.1rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      @mixin atMedium {
+        height: 120px;
+        width: 94%;
+      }
+    }
+
+    &__icons {
+       color:$mainBlue;
+       font-weight: bold;
+    }
+
+    i {
+       padding-right: 15px;
+       color: $mainBlue;
+       font-size: .8rem;
+
+       @mixin atMedium {
+         font-size: 1rem;
+       }
+    }
+
+    p {
+        font-size: .8rem;
+
+        @mixin atMedium {
+          font-size: 1.05rem;
+        }
+    }
+
+}

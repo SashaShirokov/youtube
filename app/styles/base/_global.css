@@ -1,0 +1,11 @@
+body {
+    font-family: "Gloria+Hallelujah", sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: $mainBlue;
+}
+
+.hidden {
+    visibility: hidden;
+}

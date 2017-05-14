@@ -1,0 +1,45 @@
+.btn {
+    background-color: $mainRed;
+    color: $mainBlue;
+    padding: 6px 10px;
+    font-size: .7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #7A0000;
+    transition: all .4s ease-out;
+    margin-bottom: 10px;
+
+    @mixin atMedium {
+        font-size: .9rem;
+    }
+
+    &:hover {
+        background-color: #C70A0A;
+    }
+
+    &:active {
+        background-color: $mainRed;
+        box-shadow: none;
+        position: relative;
+        top: 2px;
+        left: 2px;
+    }
+
+    &--marg {
+      margin-right: 13px;
+    }
+
+    &--numbers {
+      color: $mainRed;
+      border-radius: 14px;
+    }
+
+    &--active {
+      color: $mainBlue;
+      background-color: #C70A0A;
+    }
+
+}
