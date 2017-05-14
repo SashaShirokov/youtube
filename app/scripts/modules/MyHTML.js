@@ -102,47 +102,47 @@ class MyHTML {
     }
 
     createPageNav() {
-      this.pageNav = document.createElement("div");
-      this.prev = document.createElement('button');
+        this.pageNav = document.createElement("div");
+        this.prev = document.createElement('button');
 
-      this.numberLeft = document.createElement('button');
-      this.numberCenter = document.createElement('button');
-      this.numberRight = document.createElement('button');
+        this.numberLeft = document.createElement('button');
+        this.numberCenter = document.createElement('button');
+        this.numberRight = document.createElement('button');
 
-      this.next = document.createElement('button');
-      this.prev.innerHTML = "<<";
-      this.next.innerHTML = ">>";
-      this.numberLeft.innerHTML = "1";
-      this.numberCenter.innerHTML = "2";
-      this.numberRight.innerHTML = "3";
+        this.next = document.createElement('button');
+        this.prev.innerHTML = "<<";
+        this.next.innerHTML = ">>";
+        this.numberLeft.innerHTML = "1";
+        this.numberCenter.innerHTML = "2";
+        this.numberRight.innerHTML = "3";
 
-      document.body.appendChild(this.pageNav);
-      this.pageNav.appendChild(this.prev);
-      this.pageNav.appendChild(this.numberLeft);
-      this.pageNav.appendChild(this.numberCenter);
-      this.pageNav.appendChild(this.numberRight);
-      this.pageNav.appendChild(this.next);
+        document.body.appendChild(this.pageNav);
+        this.pageNav.appendChild(this.prev);
+        this.pageNav.appendChild(this.numberLeft);
+        this.pageNav.appendChild(this.numberCenter);
+        this.pageNav.appendChild(this.numberRight);
+        this.pageNav.appendChild(this.next);
 
-      this.prev.setAttribute('type', 'button');
-      this.prev.setAttribute('id', 'prev');
-      this.numberLeft.setAttribute('type', 'button');
-      this.numberCenter.setAttribute('type', 'button');
-      this.numberRight.setAttribute('type', 'button');
-      this.next.setAttribute('type', 'button');
-      this.next.setAttribute('id', 'next');
-      this.pageNav.setAttribute('class', 'pageNav');
-      this.pageNav.classList.add('hidden');
+        this.prev.setAttribute('type', 'button');
+        this.prev.setAttribute('id', 'prev');
+        this.numberLeft.setAttribute('type', 'button');
+        this.numberCenter.setAttribute('type', 'button');
+        this.numberRight.setAttribute('type', 'button');
+        this.next.setAttribute('type', 'button');
+        this.next.setAttribute('id', 'next');
+        this.pageNav.setAttribute('class', 'pageNav');
+        this.pageNav.classList.add('hidden');
 
-      this.numberLeft.setAttribute('class', 'btn');
-      this.numberCenter.setAttribute('class', 'btn');
-      this.numberRight.setAttribute('class', 'btn');
-      this.next.setAttribute('class', 'btn');
-      this.prev.classList.add('btn', 'btn--marg');
-      this.numberCenter.classList.add('btn--marg', 'btn--numbers');
-      this.numberRight.classList.add('btn--marg', 'btn--numbers');
-      this.numberLeft.classList.add('btn--marg', 'btn--numbers', "btn--active");
-      this.pageNav.classList.add('hide');
-      this.pageNav.setAttribute('id', 'pageNav');
+        this.numberLeft.setAttribute('class', 'btn');
+        this.numberCenter.setAttribute('class', 'btn');
+        this.numberRight.setAttribute('class', 'btn');
+        this.next.setAttribute('class', 'btn');
+        this.prev.classList.add('btn', 'btn--marg');
+        this.numberCenter.classList.add('btn--marg', 'btn--numbers');
+        this.numberRight.classList.add('btn--marg', 'btn--numbers');
+        this.numberLeft.classList.add('btn--marg', 'btn--numbers', "btn--active");
+        this.pageNav.classList.add('hide');
+        this.pageNav.setAttribute('id', 'pageNav');
     }
 }
 

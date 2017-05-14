@@ -162,7 +162,7 @@ class Pages {
     }
 
     mouseMoveStart(e) {
-        e.preventDefault();
+        e.stopPropagation();
         if (e.type === 'mousedown') {
             this.start = e.clientX;
         } else if (e.type === 'touchstart') {
@@ -171,22 +171,31 @@ class Pages {
     }
 
     mouseMoveEnd(e) {
-        e.preventDefault();
+        e.stopPropagation();
         if (e.type === 'mouseup') {
             this.range = e.clientX - this.start;
             if (this.range < -10) {
                 this.movePageForward();
+                this.resetSwipe();
             } else if (this.range > 10) {
-                this.movePageBack()
+                this.movePageBack();
+                this.resetSwipe();
             }
         } else if (e.type === 'touchend') {
             this.range = e.changedTouches[0].pageX - this.start;
             if (this.range < -10) {
                 this.movePageForward();
+                this.resetSwipe();
             } else if (this.range > 10) {
-                this.movePageBack()
+                this.movePageBack();
+                this.resetSwipe();
             }
         }
+    }
+
+    resetSwipe() {
+        this.start = null;
+        this.range = null;
     }
 
     reset() {
