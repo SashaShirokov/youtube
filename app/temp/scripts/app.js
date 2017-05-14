@@ -116,6 +116,7 @@
 	            this.search.addEventListener("keypress", this.enterKey.bind(this));
 	            this.pageNavNumbers.children[4].addEventListener("click", this.anotherRequest.bind(this));
 	            this.list.addEventListener("mousedown", this.anotherRequest.bind(this));
+	            this.list.addEventListener("touchstart", this.anotherRequest.bind(this));
 	            window.addEventListener("resize", this.myResize.bind(this));
 	        }
 	    }, {
@@ -448,6 +449,8 @@
 
 	            this.list.addEventListener("mousedown", this.mouseMoveStart.bind(this));
 	            this.list.addEventListener("mouseup", this.mouseMoveEnd.bind(this));
+	            this.list.addEventListener("touchstart", this.mouseMoveStart.bind(this));
+	            this.list.addEventListener("touchend", this.mouseMoveEnd.bind(this));
 	        }
 	    }, {
 	        key: 'scaleOnResize',

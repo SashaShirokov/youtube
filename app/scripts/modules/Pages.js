@@ -24,6 +24,8 @@ class Pages {
 
         this.list.addEventListener("mousedown", this.mouseMoveStart.bind(this));
         this.list.addEventListener("mouseup", this.mouseMoveEnd.bind(this));
+        this.list.addEventListener("touchstart", this.mouseMoveStart.bind(this));
+        this.list.addEventListener("touchend", this.mouseMoveEnd.bind(this));
     }
 
     scaleOnResize() {
